@@ -1,8 +1,8 @@
 import got from 'got';
 
 async function main() {
-        const response = await got('http://httpbin.org/get');
-        const data = response.body;
+        const resp = got('https://api.github.com/users/PaN8bors/repos')
+        const data = await resp.json();
         console.log(data)
     }
     
